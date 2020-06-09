@@ -1,6 +1,5 @@
 {
 	"version": 2,
-	"name": "brigittavandijck",
 	"scope": "vvandijck",
 	"trailingSlash": false,
 	"github": {
@@ -8,7 +7,7 @@
 	},
 	"build": {
 		"env": {
-			"NEXT_API_KEY": "@dato_api_key"
+			"NEXT_API_KEY": "@brigittavandijck-dato-api-key"
 		}
 	}
 }
