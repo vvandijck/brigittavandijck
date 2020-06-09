@@ -12,6 +12,6 @@ module.exports = withLess({
 	poweredByHeader: false,
 	reactStrictMode: true,
 	env: {
-		API_KEY: process.env.API_KEY,
+		NEXT_API_KEY: process.env.NEXT_API_KEY,
 	},
 })
