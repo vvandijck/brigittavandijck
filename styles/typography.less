@@ -1,0 +1,106 @@
+@import (reference) './variables';
+
+/* Scales from http://type-scale.com/ */
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+	margin: @spacing-smaller 0;
+	font-family: @font-bold;
+	line-height: 1.3;
+}
+
+/** Scale: Major Third */
+.h1,
+h1 {
+	font-size: 2.441rem;
+}
+
+.h2,
+h2 {
+	font-size: 1.953rem;
+}
+
+.h3,
+h3 {
+	font-size: 1.563rem;
+}
+
+.h4,
+h4 {
+	font-size: 1.25rem;
+}
+
+.h5,
+h5 {
+	font-size: 1.115rem;
+}
+
+.h6,
+h6 {
+	font-size: 1rem;
+}
+
+p + p {
+	margin-top: 1.2rem;
+}
+
+.link,
+a {
+	color: #0000ff;
+}
+
+/* Scale: Augmented Fourth */
+@media (min-width: @layout-small) {
+	.h1,
+	h1 {
+		font-size: 3.998rem;
+	}
+
+	.h2,
+	h2 {
+		font-size: 2.827rem;
+	}
+
+	.h3,
+	h3 {
+		font-size: 1.999rem;
+	}
+
+	.h4,
+	h4 {
+		font-size: 1.414rem;
+	}
+
+	.h5,
+	h5 {
+		font-size: 1.175rem;
+	}
+
+	.h6,
+	h6 {
+		font-size: 1rem;
+	}
+
+	p + p {
+		margin-top: 1.5rem;
+	}
+}
+
+.strong,
+strong {
+	font-weight: bold;
+}
+
+.italic,
+em {
+	font-style: italic;
+}

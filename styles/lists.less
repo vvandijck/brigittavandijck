@@ -1,0 +1,22 @@
+@import (reference) './variables';
+
+.list,
+ul {
+	margin-left: @spacing-large;
+	list-style: disc;
+}
+
+.numbered-list,
+ol {
+	margin-left: @spacing-large;
+	list-style: decimal;
+}
+
+.list-inline {
+	margin-left: 0;
+
+	li {
+		display: inline;
+		margin: 0 @spacing-tiny;
+	}
+}

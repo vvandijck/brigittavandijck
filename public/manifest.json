@@ -1,0 +1,9 @@
+{
+	"name": "Brigitta van Dijck",
+	"short_name": "Brigitta van Dijck",
+	"icons": [],
+	"theme_color": "#ffffff",
+	"background_color": "#ffffff",
+	"start_url": "/",
+	"display": "standalone"
+}
