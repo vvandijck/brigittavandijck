@@ -1,0 +1,44 @@
+@import (reference) '../../styles/variables';
+
+.image-text-block .container {
+	display: flex;
+	flex-direction: column;
+
+	@media (min-width: @layout-small) {
+		flex-direction: row;
+		align-items: center;
+	}
+}
+
+.image-text-block--inverted .container {
+	flex-direction: column-reverse;
+
+	@media (min-width: @layout-small) {
+		flex-direction: row-reverse;
+	}
+}
+
+.image-text-block__content,
+.image-text-block__media {
+	@media (min-width: @layout-small) {
+		width: 50%;
+	}
+}
+
+.image-text-block__content {
+	@media (min-width: @layout-small) {
+		padding: 0 40px;
+	}
+
+	@media (min-width: @layout-medium) {
+		padding: 0 60px;
+	}
+}
+
+.image-text-block__media .responsive-image {
+	box-shadow: @shadow-small;
+
+	@media (min-width: @layout-small) {
+		box-shadow: @shadow;
+	}
+}

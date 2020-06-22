@@ -1,0 +1,126 @@
+@import (reference) '../../styles/variables';
+
+.app-button {
+	display: inline-block;
+	border: 0;
+	background: none;
+	font-family: @font-medium;
+	font-size: 1rem;
+	line-height: 1.1;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.app-button--primary {
+	min-width: 14.375rem;
+	padding: @spacing-smaller @spacing-medium;
+	transition: 200ms transform ease-in-out;
+	border-radius: 3px;
+	background-color: @color-placeholder;
+	color: @color-floral-white;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.03);
+	}
+
+	&:active {
+		transform: scale(.95);
+		transition: 100ms transform ease-in-out;
+		background-color: @color-placeholder;
+	}
+
+	&:disabled,
+	&[disabled] {
+		transform: scale(1);
+		background-color: @color-placeholder;
+		pointer-events: none;
+	}
+
+	@media (min-width: @layout-small) {
+		.app-button--primary {
+			width: auto;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		&:hover,
+		&:focus,
+		&:active {
+			transform: none;
+		}
+	}
+}
+
+.app-button--secondary {
+	padding: .375rem .9375rem;
+	transition: 200ms transform ease-in-out;
+	border-radius: 3px;
+	background-color: @color-placeholder;
+	color: @color-floral-white;
+
+	&:hover,
+	&:focus {
+		transform: scale(1.05);
+	}
+
+	&:active {
+		transform: scale(.9);
+		transition: 100ms transform ease-in-out;
+		background-color: @color-placeholder;
+	}
+
+	&:disabled,
+	&[disabled] {
+		transform: scale(1);
+		background-color: @color-placeholder;
+		pointer-events: none;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		&:hover,
+		&:focus,
+		&:active {
+			transform: none;
+		}
+	}
+}
+
+.app-button--tertiary {
+	color: @color-placeholder;
+
+	&::after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: 200ms transform ease-in-out;
+		background-color: @color-placeholder;
+	}
+
+	&:hover::after,
+	&:focus::after,
+	&:active::after {
+		transform: scaleX(1);
+	}
+
+	&:active {
+		color: var(--active-blue);
+	}
+
+	&:disabled,
+	&[disabled] {
+		color: @color-placeholder;
+		pointer-events: none;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		&::after {
+			transition: none;
+		}
+	}
+}

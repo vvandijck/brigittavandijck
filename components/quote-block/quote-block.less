@@ -1,0 +1,23 @@
+@import (reference) '../../styles/variables';
+
+.quote-block {
+	text-align: center;
+}
+
+.quote-block__quote {
+	display: block;
+	quotes: '\201c' '\201d';
+	margin-bottom: @spacing-small;
+
+	&::before {
+		content: open-quote;
+	}
+
+	&::after {
+		content: close-quote;
+	}
+}
+
+.quote-block__cite {
+	color: @color-placeholder;
+}

@@ -1,0 +1,36 @@
+@import (reference) '../../styles/variables';
+
+.app-footer {
+	padding: @spacing-bigger 0 @spacing-medium;
+	background-color: @color-placeholder;
+	color: @color-floral-white;
+}
+
+.app-footer .container {
+	display: flex;
+	flex-direction: column;
+	min-height: 300px;
+}
+
+.app-footer__columns {
+	display: flex;
+	flex: 1 1 100%;
+	flex-direction: column;
+
+	@media (min-width: @layout-small) {
+		flex: 1 1 100%;
+		flex-direction: row;
+	}
+}
+
+.app-footer__column {
+	flex: 1 1 auto;
+}
+
+.app-footer__column-title {
+	margin: 0 0 @spacing-medium;
+}
+
+.app-footer__legal {
+	text-align: center;
+}

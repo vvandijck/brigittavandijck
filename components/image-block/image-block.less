@@ -1,0 +1,9 @@
+@import (reference) '../../styles/variables';
+
+.image-block .responsive-image {
+	box-shadow: @shadow-small;
+
+	@media (min-width: @layout-small) {
+		box-shadow: @shadow;
+	}
+}

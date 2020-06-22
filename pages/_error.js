@@ -4,19 +4,18 @@ import '../styles/index.less'
 import Head from 'next/head'
 
 // Components
-import Footer from '../components/footer/footer'
-import Header from '../components/header/header'
+import AppFooter from '../components/app-footer/app-footer'
+import AppHead from '../components/app-head/app-head'
+import AppHeader from '../components/app-header/app-header'
 
 const Error = () => (
 	<React.Fragment>
-		<Head>
-			<title>Error</title>
-		</Head>
-		<Header />
+		{/* <AppHead meta={home.meta} seo={home.seo} /> */}
+		<AppHeader />
 		<main className="error">
 			<h1>This page does not exist.</h1>
 		</main>
-		<Footer />
+		<AppFooter />
 	</React.Fragment>
 )
 

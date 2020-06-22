@@ -1,0 +1,40 @@
+@import (reference) '../variables';
+
+.style-guide {
+	padding: 0 @spacing-small;
+}
+
+.style-guide__section + .style-guide__section {
+	margin-top: @spacing-big;
+}
+
+.style-guide__section:last-child {
+	margin-bottom: @spacing-big;
+}
+
+.style-guide__section-title {
+	display: block;
+	padding: @spacing-tiny @spacing-smaller;
+	background-color: #cccccc;
+	font-size: 24px;
+}
+
+.style-guide__section-subtitle {
+	display: block;
+	margin-top: @spacing-medium;
+	margin-bottom: @spacing-medium;
+	padding: 6px @spacing-smaller;
+	background-color: #eeeeee;
+	font-size: 18px;
+}
+
+.style-guide__section-title + .style-guide__section-subtitle {
+	margin-top: 0;
+}
+
+.style-guide__color {
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	margin: 0 @spacing-small @spacing-small 0;
+}

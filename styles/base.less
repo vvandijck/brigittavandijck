@@ -14,15 +14,10 @@
 body {
 	min-height: 100vh;
 	overflow-x: hidden;
-	font-family: @font-light;
-	font-size: 1rem;
+	background-color: @color-floral-white;
+	color: @color-rich-black;
+	font-family: @font-regular;
 	-webkit-font-smoothing: antialiased;
-	line-height: 1.2;
-
-	@media (min-width: @layout-small) {
-		font-size: 1.25rem;
-		line-height: 1.3;
-	}
 }
 
 dl {
@@ -44,11 +39,23 @@ dl {
 .page {
 	flex: 1 0 auto;
 	width: 100%;
+	padding-bottom: 50px;
+}
+
+.page__content > * {
+	margin-bottom: @spacing-larger;
+
+	@media (min-width: @layout-small) {
+		margin-bottom: @spacing-big;
+	}
+
+	@media (min-width: @layout-medium) {
+		margin-bottom: @spacing-bigger;
+	}
 }
 
 .container {
 	width: 100%;
-	max-width: 1024px;
+	max-width: @layout-width;
 	margin: 0 auto;
-	padding: @spacing-small;
 }

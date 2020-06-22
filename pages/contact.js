@@ -3,55 +3,53 @@ import '../styles/index.less'
 // Lib
 import fetchContent from '../lib/fetch-content'
 
-// Core
-import Head from 'next/head'
-
 // Components
-import Footer from '../components/footer/footer'
-import Header from '../components/header/header'
+import AppFooter from '../components/app-footer/app-footer'
+import AppHead from '../components/app-head/app-head'
+import AppHeader from '../components/app-header/app-header'
 
-const Page = ({ props }) => (
+const Page = ({ contact, meta }) => (
 	<React.Fragment>
-		<Head>
-			<title>Contact</title>
-		</Head>
-		<Header />
+		<AppHead meta={meta} seo={contact.seo} />
+		<AppHeader />
 		<main className="page">
-			<div className="container">
-				<div dangerouslySetInnerHTML={{ __html: props.data.contact.text }}></div>
-			</div>
+			<div className="page__content"></div>
 		</main>
-		<Footer />
+		<AppFooter />
 	</React.Fragment>
 )
 
 Page.getInitialProps = async () => {
-	const CONTACT_QUERY = `query Contact {
+	const QUERY = `query Contact {
 		_site {
 			globalSeo {
 				titleSuffix
 				fallbackSeo {
 					title
+					description
 				}
 			}
 		}
 		contact {
 			id
+			keywords
+			robots
 			seo {
 				description
 				title
 			}
-			text(markdown: true)
 		}
 	}`
 
-	const data = await fetchContent({
-		query: CONTACT_QUERY,
-	})
-
-	return {
-		props: { data },
-	}
+	return await fetchContent({ query: QUERY }).then(data => ({
+		meta: {
+			...data._site.globalSeo,
+			...data.contact.seo,
+			keywords: data.contact.keywords,
+			robots: data.contact.robots,
+		},
+		contact: data.contact,
+	}))
 }
 
 export default Page
