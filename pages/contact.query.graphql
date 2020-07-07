@@ -1,0 +1,20 @@
+query Contact {
+	_site {
+		globalSeo {
+			titleSuffix
+			fallbackSeo {
+				title
+				description
+			}
+		}
+	}
+	contact {
+		id
+		keywords
+		robots
+		seo {
+			description
+			title
+		}
+	}
+}

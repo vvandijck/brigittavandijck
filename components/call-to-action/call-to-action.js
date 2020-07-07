@@ -1,0 +1,27 @@
+import PropTypes from 'prop-types'
+import Link from 'next/link'
+
+const CallToAction = ({ buttonLabel = '', link = '', title = '', text = '' }) => (
+	<section className="call-to-action">
+		<div className="container">
+			{title && <h3 className="h3">{title}</h3>}
+			{text && <div className="body-big" dangerouslySetInnerHTML={{ __html: text }}></div>}
+			{buttonLabel && link && (
+				<Link href={link}>
+					<a className="app-button app-button--secondary" title={buttonLabel}>
+						{buttonLabel}
+					</a>
+				</Link>
+			)}
+		</div>
+	</section>
+)
+
+CallToAction.propTypes = {
+	buttonLabel: PropTypes.string,
+	link: PropTypes.string,
+	title: PropTypes.string,
+	text: PropTypes.string,
+}
+
+export default CallToAction

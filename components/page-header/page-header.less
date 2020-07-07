@@ -1,9 +1,48 @@
 @import (reference) '../../styles/variables';
 
 .page-header {
+	position: relative;
+	height: 40vh;
+	min-height: 300px;
 	margin-bottom: @spacing-big;
+
+	@media (min-width: @layout-small) {
+		height: 50vh;
+	}
+
+	@media (min-width: @layout-medium) {
+		height: 66vh;
+	}
+
+	.page-header__image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 
 	.responsive-image {
 		width: 100%;
+		height: 100%;
+
+		img {
+			height: 40vh;
+
+			@media (min-width: @layout-small) {
+				height: 50vh;
+			}
+
+			@media (min-width: @layout-medium) {
+				height: 66vh;
+			}
+		}
+	}
+
+	.page-header__content {
+		position: relative;
+		top: 10vh;
 	}
 }

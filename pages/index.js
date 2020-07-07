@@ -1,4 +1,8 @@
+// Styles
 import '../styles/index.less'
+
+// Content
+import query from './index.query.graphql'
 
 // Lib
 import fetchContent from '../lib/fetch-content'
@@ -7,6 +11,7 @@ import fetchContent from '../lib/fetch-content'
 import AppFooter from '../components/app-footer/app-footer'
 import AppHead from '../components/app-head/app-head'
 import AppHeader from '../components/app-header/app-header'
+import CallToAction from '../components/call-to-action/call-to-action'
 import FullWidthImage from '../components/full-width-image/full-width-image'
 import ImageBlock from '../components/image-block/image-block'
 import ImageTextBlock from '../components/image-text-block/image-text-block'
@@ -19,8 +24,8 @@ const Page = ({ home, meta }) => (
 		<AppHead meta={meta} />
 		<AppHeader />
 		<main className="page">
-			<PageHeader image={home.header.responsiveImage} />
-			<div className="page__content">
+			<PageHeader image={home.header.responsiveImage} subtitle={'Brigitta van Dijck'} title={'Office Management'} />
+			<section className="page__content">
 				{home.content.map((block, index) => {
 					switch (block.recordType) {
 						case 'image':
@@ -47,121 +52,15 @@ const Page = ({ home, meta }) => (
 							)
 					}
 				})}
-			</div>
+			</section>
+			<CallToAction buttonLabel="Contact" link="/contact" title="Lorem ipsum" text="Lorem ipsum" />
 		</main>
 		<AppFooter />
 	</React.Fragment>
 )
 
 Page.getInitialProps = async () => {
-	const QUERY = `query Home {
-		_site {
-			globalSeo {
-				titleSuffix
-				fallbackSeo {
-					title
-					description
-				}
-			}
-		}
-		home {
-			content {
-				... on ImageRecord {
-					recordType: _modelApiKey
-					image {
-						responsiveImage(imgixParams: {fit: crop, w: 1180, auto: format}) {
-							alt
-							aspectRatio
-							base64
-							bgColor
-							height
-							sizes
-							src
-							srcSet
-							title
-							webpSrcSet
-							width
-						}
-					}
-					title
-				}
-				... on QuoteRecord {
-					recordType: _modelApiKey
-					name
-					text
-				}
-				... on TextImageRecord {
-					recordType: _modelApiKey
-					image {
-						responsiveImage(imgixParams: {fit: crop, w: 1180, auto: format}) {
-							alt
-							aspectRatio
-							base64
-							bgColor
-							height
-							sizes
-							src
-							srcSet
-							title
-							webpSrcSet
-							width
-						}
-					}
-					inverted
-					text
-					title
-				}
-				... on TextFullWidthRecord {
-					recordType: _modelApiKey
-					text(markdown: true)
-					title
-				}
-				... on ImageFullWidthRecord {
-					recordType: _modelApiKey
-					image {
-						responsiveImage(imgixParams: {fit: crop, w: 1180, h: 600, auto: format}) {
-							alt
-							aspectRatio
-							base64
-							bgColor
-							height
-							sizes
-							src
-							srcSet
-							title
-							webpSrcSet
-							width
-						}
-					}
-					title
-				}
-			}
-			header {
-				responsiveImage(imgixParams: {fit: crop, w: 1440, h: 600, auto: format}) {
-					alt
-					aspectRatio
-					base64
-					bgColor
-					height
-					sizes
-					src
-					srcSet
-					title
-					webpSrcSet
-					width
-				}
-			}
-			id
-			keywords
-			robots
-			seo {
-				description
-				title
-			}
-		}
-	}`
-
-	return await fetchContent({ query: QUERY }).then(data => ({
+	return await fetchContent({ query }).then(data => ({
 		meta: {
 			...data._site.globalSeo,
 			...data.home.seo,

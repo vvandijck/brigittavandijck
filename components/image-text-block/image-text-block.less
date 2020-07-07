@@ -7,6 +7,11 @@
 	@media (min-width: @layout-small) {
 		flex-direction: row;
 		align-items: center;
+		background-image: linear-gradient(-90deg, transparent, transparent 25%, @color-cyan 0, @color-cyan);
+	}
+
+	@media (min-width: @layout-medium) {
+		background-image: linear-gradient(-90deg, transparent, transparent 30%, @color-cyan 0, @color-cyan);
 	}
 }
 
@@ -15,30 +20,69 @@
 
 	@media (min-width: @layout-small) {
 		flex-direction: row-reverse;
+		background-image: linear-gradient(90deg, transparent, transparent 25%, @color-cyan 0, @color-cyan);
 	}
-}
 
-.image-text-block__content,
-.image-text-block__media {
-	@media (min-width: @layout-small) {
-		width: 50%;
+	@media (min-width: @layout-medium) {
+		background-image: linear-gradient(90deg, transparent, transparent 30%, @color-cyan 0, @color-cyan);
 	}
 }
 
 .image-text-block__content {
+	z-index: 1;
+	margin: -@spacing-huge 0 0 @spacing-big;
+	padding: @spacing-medium;
+	background-color: @color-cyan;
+
 	@media (min-width: @layout-small) {
-		padding: 0 40px;
+		flex: 1 1 60%;
+		margin: 0 @spacing-big 0 0;
+		padding: @spacing-big 0 @spacing-big @spacing-big;
 	}
 
 	@media (min-width: @layout-medium) {
-		padding: 0 60px;
+		flex: 1 1 50%;
+		margin: 0 @spacing-bigger 0 0;
+		padding: @spacing-bigger 0 @spacing-bigger @spacing-bigger;
+	}
+}
+
+.image-text-block--inverted .image-text-block__content {
+	margin: -@spacing-huge @spacing-big 0 0;
+
+	@media (min-width: @layout-small) {
+		margin: 0 0 0 @spacing-big;
+		padding: @spacing-big @spacing-big @spacing-big 0;
+	}
+
+	@media (min-width: @layout-medium) {
+		margin: 0 0 0 @spacing-bigger;
+		padding: @spacing-bigger @spacing-bigger @spacing-bigger 0;
+	}
+}
+
+.image-text-block__media {
+	@media (min-width: @layout-small) {
+		flex: 1 1 40%;
+		margin: 0 @spacing-big 0 0;
+	}
+
+	@media (min-width: @layout-medium) {
+		flex: 1 1 50%;
+		margin: 0 @spacing-bigger 0 0;
+	}
+}
+
+.image-text-block--inverted .image-text-block__media {
+	@media (min-width: @layout-small) {
+		margin: 0 0 0 @spacing-big;
+	}
+
+	@media (min-width: @layout-medium) {
+		margin: 0 0 0 @spacing-bigger;
 	}
 }
 
 .image-text-block__media .responsive-image {
-	box-shadow: @shadow-small;
-
-	@media (min-width: @layout-small) {
-		box-shadow: @shadow;
-	}
+	display: block;
 }

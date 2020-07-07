@@ -15,17 +15,23 @@ const AppHeader = () => (
 				<ul className="app-header__list list-inline">
 					<li>
 						<Link href="/practice">
-							<a className="app-button app-button--tertiary">Werkwijze</a>
+							<a className="app-button app-button--tertiary" title="Werkwijze">
+								Werkwijze
+							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/about">
-							<a className="app-button app-button--tertiary">Over</a>
+							<a className="app-button app-button--tertiary" title="Over">
+								Over
+							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/contact">
-							<a className="app-button app-button--secondary">Contact</a>
+							<a className="app-button app-button--secondary" title="Contact">
+								Contact
+							</a>
 						</Link>
 					</li>
 				</ul>

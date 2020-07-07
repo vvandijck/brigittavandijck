@@ -1,4 +1,8 @@
+// Styles
 import '../styles/index.less'
+
+// Content
+import query from './contact.query.graphql'
 
 // Lib
 import fetchContent from '../lib/fetch-content'
@@ -7,41 +11,22 @@ import fetchContent from '../lib/fetch-content'
 import AppFooter from '../components/app-footer/app-footer'
 import AppHead from '../components/app-head/app-head'
 import AppHeader from '../components/app-header/app-header'
+import CallToAction from '../components/call-to-action/call-to-action'
 
 const Page = ({ contact, meta }) => (
 	<React.Fragment>
 		<AppHead meta={meta} seo={contact.seo} />
 		<AppHeader />
 		<main className="page">
-			<div className="page__content"></div>
+			<section className="page__content"></section>
+			<CallToAction buttonLabel="Contact" link="/contact" title="Lorem ipsum" text="Lorem ipsum" />
 		</main>
 		<AppFooter />
 	</React.Fragment>
 )
 
 Page.getInitialProps = async () => {
-	const QUERY = `query Contact {
-		_site {
-			globalSeo {
-				titleSuffix
-				fallbackSeo {
-					title
-					description
-				}
-			}
-		}
-		contact {
-			id
-			keywords
-			robots
-			seo {
-				description
-				title
-			}
-		}
-	}`
-
-	return await fetchContent({ query: QUERY }).then(data => ({
+	return await fetchContent({ query }).then(data => ({
 		meta: {
 			...data._site.globalSeo,
 			...data.contact.seo,

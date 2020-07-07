@@ -7,6 +7,11 @@ const plugin = new webpack.EnvironmentPlugin(localEnv)
 module.exports = withLess({
 	webpack(config) {
 		config.plugins.push(plugin)
+		config.module.rules.push({
+			test: /\.graphql$/,
+			use: 'raw-loader'
+		}
+)
 		return config
 	},
 	poweredByHeader: false,

@@ -6,11 +6,22 @@
 	background: none;
 	font-family: @font-medium;
 	font-size: 1rem;
-	line-height: 1.1;
+	font-weight: 400;
+	line-height: 1.5625;
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
 	cursor: pointer;
+
+	@media (min-width: @layout-small) {
+		font-size: 1.0625rem;
+		line-height: 1.5882352941;
+	}
+
+	@media (min-width: @layout-medium) {
+		font-size: 1.125rem;
+		line-height: 1.6111111111;
+	}
 }
 
 .app-button--primary {
@@ -18,7 +29,7 @@
 	padding: @spacing-smaller @spacing-medium;
 	transition: 200ms transform ease-in-out;
 	border-radius: 3px;
-	background-color: @color-placeholder;
+	background-color: @color-cornflower;
 	color: @color-floral-white;
 
 	&:hover,
@@ -58,7 +69,7 @@
 	padding: .375rem .9375rem;
 	transition: 200ms transform ease-in-out;
 	border-radius: 3px;
-	background-color: @color-placeholder;
+	background-color: @color-cornflower;
 	color: @color-floral-white;
 
 	&:hover,
@@ -89,7 +100,7 @@
 }
 
 .app-button--tertiary {
-	color: @color-placeholder;
+	color: @color-cornflower;
 
 	&::after {
 		content: '';
@@ -99,7 +110,7 @@
 		transform: scaleX(0);
 		transform-origin: left;
 		transition: 200ms transform ease-in-out;
-		background-color: @color-placeholder;
+		background-color: @color-cornflower;
 	}
 
 	&:hover::after,
@@ -109,7 +120,7 @@
 	}
 
 	&:active {
-		color: var(--active-blue);
+		color: @color-cornflower;
 	}
 
 	&:disabled,
