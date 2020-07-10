@@ -53,7 +53,12 @@ const Page = ({ practice, meta }) => (
 					}
 				})}
 			</section>
-			<CallToAction buttonLabel="Contact" link="/contact" title="Lorem ipsum" text="Lorem ipsum" />
+			<CallToAction
+				buttonLabel={practice.callToAction.label}
+				link={practice.callToAction.link}
+				title={practice.callToAction.title}
+				text={practice.callToAction.text}
+			/>
 		</main>
 		<AppFooter />
 	</React.Fragment>

@@ -21,7 +21,12 @@ const Page = ({ contact, meta }) => (
 		<main className="page">
 			<PageHeader image={contact.header.responsiveImage} subtitle={contact.subtitle} title={contact.title} />
 			<section className="page__content"></section>
-			<CallToAction buttonLabel="Contact" link="/contact" title="Lorem ipsum" text="Lorem ipsum" />
+			<CallToAction
+				buttonLabel={contact.callToAction.label}
+				link={contact.callToAction.link}
+				title={contact.callToAction.title}
+				text={contact.callToAction.text}
+			/>
 		</main>
 		<AppFooter />
 	</React.Fragment>

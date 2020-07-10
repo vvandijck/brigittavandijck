@@ -6,7 +6,7 @@ const ImageTextBlock = ({ title = '', text = '', image = {}, inverted = false })
 		<div className="container">
 			<div className="image-text-block__content">
 				{title && <h3 className="h3">{title}</h3>}
-				<p className="body-big">{text}</p>
+				<div className="body-big" dangerouslySetInnerHTML={{ __html: text }}></div>
 			</div>
 			<div className="image-text-block__media">
 				<ResponsiveImage image={image} />

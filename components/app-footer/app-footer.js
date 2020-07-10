@@ -16,7 +16,7 @@ const AppFooter = () => (
 							</Link>
 						</li>
 						<li>
-							<Link href="/about"as="over">
+							<Link href="/about" as="over">
 								<a className="body" title="Over">
 									Over
 								</a>
@@ -53,17 +53,35 @@ const AppFooter = () => (
 				<div className="app-footer__column">
 					<ul className="app-footer__social list-inline">
 						<li>
-							<a href="https://www.linkedin.com/in/brigitta-van-dijck-6189831a/" target="_blank" title="LinkedIn profiel" rel="noreferrer noopener" className="body">
+							<a
+								href="https://www.linkedin.com/in/brigitta-van-dijck-6189831a/"
+								target="_blank"
+								title="LinkedIn profiel"
+								rel="noreferrer noopener"
+								className="body"
+							>
 								<img className="app-footer__social-icon" src="/icons/icon-linkedin.svg" alt="LinkedIn icon" />
 							</a>
 						</li>
 						<li>
-							<a href="https://www.twitter.com/brigittadijckje" target="_blank" title="Twitter profiel" rel="noreferrer noopener" className="body">
+							<a
+								href="https://www.twitter.com/brigittadijckje"
+								target="_blank"
+								title="Twitter profiel"
+								rel="noreferrer noopener"
+								className="body"
+							>
 								<img className="app-footer__social-icon" src="/icons/icon-twitter.svg" alt="Twitter icon" />
 							</a>
 						</li>
 						<li>
-							<a href="https://www.instagram.com/brigittavandijck/" target="_blank" title="Instagram profiel" rel="noreferrer noopener" className="body">
+							<a
+								href="https://www.instagram.com/brigittavandijck/"
+								target="_blank"
+								title="Instagram profiel"
+								rel="noreferrer noopener"
+								className="body"
+							>
 								<img className="app-footer__social-icon" src="/icons/icon-instagram.svg" alt="Instagram icon" />
 							</a>
 						</li>

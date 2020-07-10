@@ -70,7 +70,7 @@ query About {
 					}
 				}
 				inverted
-				text
+				text(markdown: true)
 				title
 			}
 			... on TextFullWidthRecord {

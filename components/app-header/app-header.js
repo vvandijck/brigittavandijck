@@ -21,7 +21,7 @@ const AppHeader = () => (
 						</Link>
 					</li>
 					<li>
-						<Link href="/about"as="over">
+						<Link href="/about" as="over">
 							<a className="app-button app-button--tertiary" title="Over">
 								Over
 							</a>

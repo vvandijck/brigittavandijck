@@ -7,8 +7,8 @@ const CallToAction = ({ buttonLabel = '', link = '', title = '', text = '' }) =>
 			{title && <h3 className="h3">{title}</h3>}
 			{text && <div className="body-big" dangerouslySetInnerHTML={{ __html: text }}></div>}
 			{buttonLabel && link && (
-				<Link href={link}>
-					<a className="app-button app-button--secondary" title={buttonLabel}>
+				<Link href={link.slug}>
+					<a className="call-to-action__button app-button app-button--secondary" title={buttonLabel}>
 						{buttonLabel}
 					</a>
 				</Link>
