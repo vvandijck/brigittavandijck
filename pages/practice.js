@@ -24,7 +24,7 @@ const Page = ({ practice, meta }) => (
 		<AppHead meta={meta} seo={practice.seo} />
 		<AppHeader />
 		<main className="page">
-			<PageHeader image={practice.header.responsiveImage} subtitle={'Werkwijze'} title={'Donec lorem elit'} />
+			<PageHeader image={practice.header.responsiveImage} subtitle={practice.subtitle} title={practice.title} />
 			<section className="page__content">
 				{practice.content.map((block, index) => {
 					switch (block.recordType) {

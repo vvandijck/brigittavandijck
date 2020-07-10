@@ -24,7 +24,7 @@ const Page = ({ home, meta }) => (
 		<AppHead meta={meta} />
 		<AppHeader />
 		<main className="page">
-			<PageHeader image={home.header.responsiveImage} subtitle={'Brigitta van Dijck'} title={'Office Management'} />
+			<PageHeader image={home.header.responsiveImage} subtitle={home.subtitle} title={home.title} />
 			<section className="page__content">
 				{home.content.map((block, index) => {
 					switch (block.recordType) {

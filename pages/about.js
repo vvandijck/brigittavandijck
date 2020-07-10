@@ -24,7 +24,7 @@ const Page = ({ about, meta }) => (
 		<AppHead meta={meta} seo={about.seo} />
 		<AppHeader />
 		<main className="page">
-			<PageHeader image={about.header.responsiveImage} subtitle={'Over'} title={'Maecenas finibus sollicitudin'} />
+			<PageHeader image={about.header.responsiveImage} subtitle={about.subtitle} title={about.title} />
 			<section className="page__content">
 				{about.content.map((block, index) => {
 					switch (block.recordType) {

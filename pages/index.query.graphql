@@ -9,6 +9,24 @@ query Home {
 		}
 	}
 	home {
+		title
+		subtitle
+		callToAction {
+			label
+			link {
+				... on PracticeRecord {
+					slug
+				}
+				... on ContactRecord {
+					slug
+				}
+				... on AboutRecord {
+					slug
+				}
+			}
+			text(markdown: true)
+			title
+		}
 		content {
 			... on ImageRecord {
 				recordType: _modelApiKey

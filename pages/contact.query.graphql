@@ -9,6 +9,39 @@ query Contact {
 		}
 	}
 	contact {
+		title
+		subtitle
+		callToAction {
+			label
+			link {
+				... on PracticeRecord {
+					slug
+				}
+				... on ContactRecord {
+					slug
+				}
+				... on AboutRecord {
+					slug
+				}
+			}
+			text(markdown: true)
+			title
+		}
+		header {
+			responsiveImage(imgixParams: {fit: crop, w: 1440, h: 500, auto: format}) {
+				alt
+				aspectRatio
+				base64
+				bgColor
+				height
+				sizes
+				src
+				srcSet
+				title
+				webpSrcSet
+				width
+			}
+		}
 		id
 		keywords
 		robots
