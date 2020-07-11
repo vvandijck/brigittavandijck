@@ -17,6 +17,7 @@ import ImageBlock from '../components/image-block/image-block'
 import ImageTextBlock from '../components/image-text-block/image-text-block'
 import PageHeader from '../components/page-header/page-header'
 import QuoteBlock from '../components/quote-block/quote-block'
+import ServicesList from '../components/services-list/services-list'
 import TextBlock from '../components/text-block/text-block'
 import TitleListBlock from '../components/title-list-block/title-list-block'
 
@@ -26,6 +27,7 @@ const Page = ({ practice, meta }) => (
 		<AppHeader />
 		<main className="page">
 			<PageHeader image={practice.header.responsiveImage} subtitle={practice.subtitle} title={practice.title} />
+			<ServicesList services={practice.services} />
 			<section className="page__content">
 				{practice.content.map((block, index) => {
 					switch (block.recordType) {
