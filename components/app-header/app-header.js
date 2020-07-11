@@ -14,14 +14,14 @@ const AppHeader = () => (
 			<nav className="app-header__nav">
 				<ul className="app-header__list list-inline">
 					<li>
-						<Link href="/practice" as="werkwijze">
+						<Link href="/practice">
 							<a className="app-button app-button--tertiary" title="Werkwijze">
 								Werkwijze
 							</a>
 						</Link>
 					</li>
 					<li>
-						<Link href="/about" as="over">
+						<Link href="/about">
 							<a className="app-button app-button--tertiary" title="Over">
 								Over
 							</a>
