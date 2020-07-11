@@ -2,7 +2,7 @@
 import '../styles/index.less'
 
 // Content
-import query from './contact.query.graphql'
+import graphqlQuery from './contact.query.graphql'
 
 // Lib
 import fetchContent from '../lib/fetch-content'
@@ -33,7 +33,7 @@ const Page = ({ contact, meta }) => (
 )
 
 Page.getInitialProps = async () => {
-	return await fetchContent({ query }).then(data => ({
+	return await fetchContent({ query: graphqlQuery }).then(data => ({
 		meta: {
 			...data._site.globalSeo,
 			...data.contact.seo,

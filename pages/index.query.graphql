@@ -14,7 +14,7 @@ query Home {
 		callToAction {
 			label
 			link {
-				... on PracticeRecord {
+				... on PracticeOverviewRecord {
 					slug
 				}
 				... on ContactRecord {
@@ -121,7 +121,11 @@ query Home {
 		}
 		services {
 			label
-			link
+			link {
+				... on PracticeRecord {
+					slug
+				}
+			}
 			text
 			title
 		}

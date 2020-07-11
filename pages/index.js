@@ -2,7 +2,7 @@
 import '../styles/index.less'
 
 // Content
-import query from './index.query.graphql'
+import graphqlQuery from './index.query.graphql'
 
 // Lib
 import fetchContent from '../lib/fetch-content'
@@ -70,7 +70,7 @@ const Page = ({ home, meta }) => (
 )
 
 Page.getInitialProps = async () => {
-	return await fetchContent({ query }).then(data => ({
+	return await fetchContent({ query: graphqlQuery }).then(data => ({
 		meta: {
 			...data._site.globalSeo,
 			...data.home.seo,

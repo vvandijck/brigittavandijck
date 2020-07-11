@@ -2,7 +2,7 @@
 import '../styles/index.less'
 
 // Content
-import query from './practice.query.graphql'
+import graphqlQuery from './practice.query.graphql'
 
 // Lib
 import fetchContent from '../lib/fetch-content'
@@ -20,16 +20,21 @@ import QuoteBlock from '../components/quote-block/quote-block'
 import ServicesList from '../components/services-list/services-list'
 import TextBlock from '../components/text-block/text-block'
 import TitleListBlock from '../components/title-list-block/title-list-block'
+import query from './practice/[slug].query'
 
-const Page = ({ practice, meta }) => (
+const Page = ({ practiceOverview, meta }) => (
 	<React.Fragment>
-		<AppHead meta={meta} seo={practice.seo} />
+		<AppHead meta={meta} seo={practiceOverview.seo} />
 		<AppHeader />
 		<main className="page">
-			<PageHeader image={practice.header.responsiveImage} subtitle={practice.subtitle} title={practice.title} />
-			<ServicesList services={practice.services} />
+			<PageHeader
+				image={practiceOverview.header.responsiveImage}
+				subtitle={practiceOverview.subtitle}
+				title={practiceOverview.title}
+			/>
+			<ServicesList services={practiceOverview.services} />
 			<section className="page__content">
-				{practice.content.map((block, index) => {
+				{practiceOverview.content.map((block, index) => {
 					switch (block.recordType) {
 						case 'image':
 							return <ImageBlock key={index} image={block.image.responsiveImage} title={block.title} />
@@ -59,10 +64,10 @@ const Page = ({ practice, meta }) => (
 				})}
 			</section>
 			<CallToAction
-				buttonLabel={practice.callToAction.label}
-				link={practice.callToAction.link}
-				title={practice.callToAction.title}
-				text={practice.callToAction.text}
+				buttonLabel={practiceOverview.callToAction.label}
+				link={practiceOverview.callToAction.link}
+				title={practiceOverview.callToAction.title}
+				text={practiceOverview.callToAction.text}
 			/>
 		</main>
 		<AppFooter />
@@ -70,14 +75,14 @@ const Page = ({ practice, meta }) => (
 )
 
 Page.getInitialProps = async () => {
-	return await fetchContent({ query }).then(data => ({
+	return await fetchContent({ query: graphqlQuery }).then(data => ({
 		meta: {
 			...data._site.globalSeo,
-			...data.practice.seo,
-			keywords: data.practice.keywords,
-			robots: data.practice.robots,
+			...data.practiceOverview.seo,
+			keywords: data.practiceOverview.keywords,
+			robots: data.practiceOverview.robots,
 		},
-		practice: data.practice,
+		practiceOverview: data.practiceOverview,
 	}))
 }
 

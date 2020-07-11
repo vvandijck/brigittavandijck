@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
 const ServicesList = ({ services = [] }) => (
 	<section className="services-list">
@@ -10,9 +11,11 @@ const ServicesList = ({ services = [] }) => (
 						<h3 className="h3">{service.title}</h3>
 						<hr className="service-list__divider"></hr>
 						<p className="body">{service.text}</p>
-						<a href={service.link} className="service-list__link app-button app-button--secondary">
-							{service.label}
-						</a>
+						<Link href={`/practice/${service.link.slug}`}>
+							<a className="service-list__link app-button app-button--secondary">
+								{service.label}
+							</a>
+						</Link>
 					</div>
 				))}
 			</div>
@@ -24,9 +27,11 @@ const ServicesList = ({ services = [] }) => (
 						<h3 className="h4">{service.title}</h3>
 						<hr className="service-list__divider"></hr>
 						<p className="body-petite">{service.text}</p>
-						<a href={service.link} className="service-list__link app-button app-button--tertiary">
-							{service.label}
-						</a>
+						<Link href={`/practice/${service.link.slug}`}>
+							<a className="service-list__link app-button app-button--tertiary">
+								{service.label}
+							</a>
+						</Link>
 					</div>
 				))}
 			</div>

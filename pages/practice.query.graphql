@@ -1,4 +1,4 @@
-query Practice {
+query PracticeOverview {
 	_site {
 		globalSeo {
 			titleSuffix
@@ -8,13 +8,13 @@ query Practice {
 			}
 		}
 	}
-	practice {
+	practiceOverview {
 		title
 		subtitle
 		callToAction {
 			label
 			link {
-				... on PracticeRecord {
+				... on PracticeOverviewRecord {
 					slug
 				}
 				... on ContactRecord {
@@ -121,7 +121,11 @@ query Practice {
 		}
 		services {
 			label
-			link
+			link {
+				... on PracticeRecord {
+					slug
+				}
+			}
 			text
 			title
 		}

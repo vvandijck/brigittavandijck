@@ -14,7 +14,7 @@ query Contact {
 		callToAction {
 			label
 			link {
-				... on PracticeRecord {
+				... on PracticeOverviewRecord {
 					slug
 				}
 				... on ContactRecord {
