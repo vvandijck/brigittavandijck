@@ -97,6 +97,12 @@ query About {
 				}
 				title
 			}
+			... on TextListRecord {
+				recordType: _modelApiKey
+				inverted
+				text(markdown: true)
+				title
+			}
 		}
 		header {
 			responsiveImage(imgixParams: {fit: crop, w: 1440, h: 500, auto: format}) {
