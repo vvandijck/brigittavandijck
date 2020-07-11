@@ -1,0 +1,120 @@
+@import (reference) '../../styles/variables';
+
+.services-list {
+	margin-bottom: @spacing-small;
+}
+
+.services-list__title,
+.services-list__subtitle {
+	margin: 0 @spacing-small @spacing-medium;
+	text-align: center;
+
+	@media (min-width: @layout-small) {
+		margin: 0 0 @spacing-large;
+	}
+
+	@media (min-width: @layout-medium) {
+		margin: 0 0 @spacing-big;
+	}
+}
+
+.services-list__list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	@media (min-width: @layout-small) {
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0 @spacing-small @spacing-medium;
+	}
+
+	@media (min-width: @layout-medium) {
+		margin: 0 @spacing-small @spacing-larger;
+	}
+}
+
+.services-list__list--secondary {
+	justify-content: center;
+}
+
+.services-list__item {
+	display: flex;
+	flex: 1 0 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	margin: 0 @spacing-small @spacing-small;
+	padding: @spacing-medium @spacing-small;
+	background-color: @color-cyan;
+
+	@media (min-width: @layout-small) {
+		flex: 0 1 calc(33.33% - calc(48px / 3));
+		margin: 0;
+	}
+
+	@media (min-width: @layout-medium) {
+		padding: @spacing-large;
+	}
+}
+
+.services-list__list--secondary .services-list__item {
+	padding: @spacing-small;
+	border: 2px solid @color-cornflower;
+	background-color: transparent;
+
+	@media (min-width: @layout-small) {
+		flex: 0 1 50%;
+		max-width: 360px;
+	}
+
+	@media (min-width: @layout-medium) {
+		padding: @spacing-medium;
+	}
+
+	&:first-of-type {
+		@media (min-width: @layout-small) {
+			margin-right: @spacing-small;
+		}
+
+		@media (min-width: @layout-medium) {
+			margin-right: @spacing-medium;
+		}
+	}
+}
+
+.service-list__divider {
+	width: 30px;
+	height: 2px;
+	margin: 0 0 @spacing-small;
+	border: none;
+	background-color: @color-cornflower;
+
+	@media (min-width: @layout-small) {
+		margin: 0 0 @spacing-medium;
+	}
+}
+
+.services-list__item .h3 {
+	margin-bottom: @spacing-medium;
+}
+
+.services-list__item .body {
+	margin-bottom: @spacing-medium;
+
+	@media (min-width: @layout-small) {
+		margin-bottom: @spacing-large;
+	}
+}
+
+.services-list__item .body-petite {
+	margin-bottom: @spacing-small;
+
+	@media (min-width: @layout-small) {
+		margin-bottom: @spacing-medium;
+	}
+}
+
+.services-list__item .service-list__link {
+	margin-top: auto;
+}

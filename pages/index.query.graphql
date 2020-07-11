@@ -119,6 +119,12 @@ query Home {
 				width
 			}
 		}
+		services {
+			label
+			link
+			text
+			title
+		}
 		id
 		keywords
 		robots
