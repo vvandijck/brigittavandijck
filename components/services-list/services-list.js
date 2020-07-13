@@ -12,9 +12,7 @@ const ServicesList = ({ services = [] }) => (
 						<hr className="service-list__divider"></hr>
 						<p className="body">{service.text}</p>
 						<Link href={`/practice/${service.link.slug}`}>
-							<a className="service-list__link app-button app-button--secondary">
-								{service.label}
-							</a>
+							<a className="service-list__link app-button app-button--primary">{service.label}</a>
 						</Link>
 					</div>
 				))}
@@ -28,9 +26,7 @@ const ServicesList = ({ services = [] }) => (
 						<hr className="service-list__divider"></hr>
 						<p className="body-petite">{service.text}</p>
 						<Link href={`/practice/${service.link.slug}`}>
-							<a className="service-list__link app-button app-button--tertiary">
-								{service.label}
-							</a>
+							<a className="service-list__link app-button app-button--secondary">{service.label}</a>
 						</Link>
 					</div>
 				))}

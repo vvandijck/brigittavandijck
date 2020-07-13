@@ -89,17 +89,36 @@ const AppFooter = () => (
 				</div>
 			</div>
 			<div className="app-footer__legal">
-				<dl className="body-detail">
-					<dt>KvK:</dt>
-					<dd>77533151</dd>
-				</dl>
-				<span className="body-detail">&copy; 2020 - Brigitta van Dijck</span>
-				<a className="body-detail" href="/" target="_blank" rel="noopener noreferrer">
-					Privacy statement
-				</a>
-				<a className="body-detail" href="/" target="_blank" rel="noopener noreferrer">
-					Algemene voorwaarden
-				</a>
+				<div className="app-footer__legal--column">
+					<ul className="list-inline">
+						<li>
+							<span className="body-detail">KvK: 77533151</span>
+						</li>
+						<li>
+							<span className="body-detail">&copy; 2020 - Brigitta van Dijck</span>
+						</li>
+					</ul>
+				</div>
+				<div className="app-footer__legal--column">
+					<ul className="list-inline">
+						<li>
+							<a className="body-detail" href="/" title="Privacy statement" target="_blank" rel="noopener noreferrer">
+								Privacy statement
+							</a>
+						</li>
+						<li>
+							<a
+								className="body-detail"
+								href="/"
+								title="Algemene voorwaarden"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
+								Algemene voorwaarden
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</footer>

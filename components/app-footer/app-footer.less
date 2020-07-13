@@ -99,4 +99,19 @@
 
 .app-footer__legal {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@media (min-width: @layout-small) {
+		flex-direction: row;
+		justify-content: center;
+	}
+}
+
+.app-footer__legal--column:first-child {
+	margin-bottom: @spacing-smaller;
+
+	@media (min-width: @layout-small) {
+		margin-bottom: 0;
+	}
 }
