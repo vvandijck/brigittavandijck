@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
+import RichText from '../rich-text/rich-text'
 
 const TextBlock = ({ title = '', text = '' }) => (
 	<section className="text-block">
 		<div className="container">
 			{title && <h3 className="h3">{title}</h3>}
-			<div className="body-big" dangerouslySetInnerHTML={{ __html: text }}></div>
+			<RichText content={text} />
 		</div>
 	</section>
 )

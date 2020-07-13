@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
+import RichText from '../rich-text/rich-text'
 
 const TitleListBlock = ({ title = '', text = '', inverted = false }) => (
 	<section className={`title-list-block ${inverted ? 'title-list-block--inverted' : ''}`}>
 		<div className="container">
 			<div className="title-list-block__content">
-				<div className="body-big" dangerouslySetInnerHTML={{ __html: text }}></div>
+				<RichText content={text} />
 			</div>
 			{title && <h3 className="title-list-block__title h2">{title}</h3>}
 		</div>
