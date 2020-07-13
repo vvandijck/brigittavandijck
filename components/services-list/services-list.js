@@ -11,7 +11,7 @@ const ServicesList = ({ services = [] }) => (
 						<h3 className="h3">{service.title}</h3>
 						<hr className="service-list__divider"></hr>
 						<p className="body">{service.text}</p>
-						<Link href={`/practice/${service.link.slug}`}>
+						<Link href="/practice/[slug]" as={`/practice/${service.link.slug}`}>
 							<a className="service-list__link app-button app-button--primary">{service.label}</a>
 						</Link>
 					</div>
@@ -25,7 +25,7 @@ const ServicesList = ({ services = [] }) => (
 						<h3 className="h4">{service.title}</h3>
 						<hr className="service-list__divider"></hr>
 						<p className="body-petite">{service.text}</p>
-						<Link href={`/practice/${service.link.slug}`}>
+						<Link href="/practice/[slug]" as={`/practice/${service.link.slug}`}>
 							<a className="service-list__link app-button app-button--secondary">{service.label}</a>
 						</Link>
 					</div>
