@@ -131,7 +131,6 @@ query Home {
 		}
 		id
 		keywords
-		robots
 		seo {
 			description
 			title

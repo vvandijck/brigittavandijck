@@ -131,7 +131,6 @@ query PracticeOverview {
 		}
 		id
 		keywords
-		robots
 		seo {
 			description
 			title

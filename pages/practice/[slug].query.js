@@ -107,7 +107,6 @@ const query = slug => `
 			}
 			id
 			keywords
-			robots
 			seo {
 				description
 				title

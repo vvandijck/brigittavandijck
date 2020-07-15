@@ -44,7 +44,6 @@ query Contact {
 		}
 		id
 		keywords
-		robots
 		seo {
 			description
 			title

@@ -121,7 +121,6 @@ query About {
 		}
 		id
 		keywords
-		robots
 		seo {
 			description
 			title

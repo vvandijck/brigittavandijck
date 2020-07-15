@@ -80,7 +80,6 @@ Page.getInitialProps = async () => {
 			...data._site.globalSeo,
 			...data.practiceOverview.seo,
 			keywords: data.practiceOverview.keywords,
-			robots: data.practiceOverview.robots,
 		},
 		practiceOverview: data.practiceOverview,
 	}))

@@ -75,7 +75,6 @@ Page.getInitialProps = async () => {
 			...data._site.globalSeo,
 			...data.home.seo,
 			keywords: data.home.keywords,
-			robots: data.home.robots,
 		},
 		home: data.home,
 	}))
