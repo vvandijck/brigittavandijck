@@ -102,15 +102,21 @@ const AppFooter = () => (
 				<div className="app-footer__legal--column">
 					<ul className="list-inline">
 						<li>
-							<a className="body-detail" href="/" title="Privacy statement" target="_blank" rel="noopener noreferrer">
+							<a
+								className="body-detail"
+								href="https://www.datocms-assets.com/24034/1595787652-privacyverklaring.pdf"
+								aria-title="PDF bestand van Brigitta van Dijck privacy statement"
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								Privacy statement
 							</a>
 						</li>
 						<li>
 							<a
 								className="body-detail"
-								href="/"
-								title="Algemene voorwaarden"
+								href="https://www.datocms-assets.com/24034/1595787650-avht-def-brigitta-van-dijck-versie-10032020.pdf"
+								aria-label="PDF bestand van Brigitta van Dijck algemene voorwaarden"
 								target="_blank"
 								rel="noopener noreferrer"
 							>

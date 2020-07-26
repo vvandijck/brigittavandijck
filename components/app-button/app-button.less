@@ -102,9 +102,11 @@
 .app-button--tertiary {
 	color: @color-cornflower;
 
-	&::after {
+	&::before {
 		content: '';
 		display: block;
+		position: absolute;
+		bottom: 0;
 		width: 100%;
 		height: 2px;
 		transform: scaleX(0);
@@ -113,9 +115,9 @@
 		background-color: @color-cornflower;
 	}
 
-	&:hover::after,
-	&:focus::after,
-	&:active::after {
+	&:hover::before,
+	&:focus::before,
+	&:active::before {
 		transform: scaleX(1);
 	}
 
@@ -130,7 +132,7 @@
 	}
 
 	@media (prefers-reduced-motion: reduce) {
-		&::after {
+		&::before {
 			transition: none;
 		}
 	}
