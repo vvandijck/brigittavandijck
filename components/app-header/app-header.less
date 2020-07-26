@@ -1,4 +1,3 @@
-
 @import (reference) '../../styles/variables';
 
 .app-header {
@@ -8,15 +7,32 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 0 @spacing-small;
+		padding: @spacing-small @spacing-small;
+
+		@media (min-width: @layout-medium) {
+			padding: @spacing-medium @spacing-small;
+		}
+
+		@media (min-width: @layout-large) {
+			padding: @spacing-large @spacing-small;
+		}
+	}
+}
+
+.app-header__logo {
+	width: 200px;
+	height: auto;
+
+	@media (min-width: @layout-small) {
+		width: 250px;
 	}
 }
 
 .app-header__nav {
-	padding: @spacing-medium 0;
+	display: none;
 
 	@media (min-width: @layout-small) {
-		padding: @spacing-large 0;
+		display: initial;
 	}
 }
 
