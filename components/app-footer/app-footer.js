@@ -9,9 +9,9 @@ const AppFooter = () => (
 					<h3 className="app-footer__column-title h3">Ontdek</h3>
 					<ul className="app-footer__list unordered-list body">
 						<li>
-							<Link href="/practice">
+							<Link href="/services">
 								<a className="body" title="Werkwijze">
-									Werkwijze
+									Services
 								</a>
 							</Link>
 						</li>
