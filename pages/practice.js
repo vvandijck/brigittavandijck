@@ -32,7 +32,11 @@ const Page = ({ practiceOverview, meta }) => (
 				subtitle={practiceOverview.subtitle}
 				title={practiceOverview.title}
 			/>
-			<ServicesList services={practiceOverview.services} />
+			<ServicesList services={practiceOverview.services.slice(0, 3)} />
+			<div className="container">
+				<h4 className="services__title h3">En zelfs ook</h4>
+			</div>
+			<ServicesList services={practiceOverview.services.slice(3, 5)} small />
 			<section className="page__content">
 				{practiceOverview.content.map((block, index) => {
 					switch (block.recordType) {

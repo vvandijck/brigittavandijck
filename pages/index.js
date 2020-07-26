@@ -27,7 +27,14 @@ const Page = ({ home, meta }) => (
 		<AppHeader />
 		<main className="page">
 			<PageHeader image={home.header.responsiveImage} subtitle={home.subtitle} title={home.title} />
-			<ServicesList services={home.services} />
+			<div className="container">
+				<h3 className="services__title h2">Wat ik voor je kan doen</h3>
+			</div>
+			<ServicesList services={home.services.slice(0, 3)} />
+			<div className="container">
+				<h4 className="services__title h3">En zelfs ook</h4>
+			</div>
+			<ServicesList services={home.services.slice(3, 5)} small />
 			<section className="page__content">
 				{home.content.map((block, index) => {
 					switch (block.recordType) {
