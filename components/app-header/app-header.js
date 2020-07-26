@@ -14,9 +14,9 @@ const AppHeader = () => (
 			<nav className="app-header__nav">
 				<ul className="app-header__list list-inline">
 					<li>
-						<Link href="/practice">
+						<Link href="/services">
 							<a className="app-button app-button--tertiary" title="Werkwijze">
-								Werkwijze
+								Services
 							</a>
 						</Link>
 					</li>

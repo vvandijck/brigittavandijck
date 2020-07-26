@@ -14,7 +14,7 @@ query About {
 		callToAction {
 			label
 			link {
-				... on PracticeOverviewRecord {
+				... on ServicesOverviewRecord {
 					slug
 				}
 				... on ContactRecord {

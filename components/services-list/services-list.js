@@ -10,7 +10,7 @@ const ServicesList = ({ services = [], small = false }) => (
 						<h3 className={`${small ? 'h4' : 'h3'}`}>{service.title}</h3>
 						<hr className="service-list__divider"></hr>
 						<p className={`${small ? 'body-petite' : 'body'}`}>{service.text}</p>
-						<Link href="/practice/[slug]" as={`/practice/${service.link.slug}`}>
+						<Link href="/service/[slug]" as={`/service/${service.link.slug}`}>
 							<a className={`service-list__link app-button app-button--${small ? 'secondary' : 'primary'}`}>{service.label}</a>
 						</Link>
 					</div>

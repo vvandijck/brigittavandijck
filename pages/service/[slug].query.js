@@ -9,13 +9,13 @@ const query = slug => `
 				}
 			}
 		}
-		practice(filter: {slug: {eq: "${slug}"}}) {
+		service(filter: {slug: {eq: "${slug}"}}) {
 			title
 			subtitle
 			callToAction {
 				label
 				link {
-					... on PracticeOverviewRecord {
+					... on ServicesOverviewRecord {
 						slug
 					}
 					... on ContactRecord {

@@ -2,7 +2,7 @@
 import '../styles/index.less'
 
 // Content
-import graphqlQuery from './practice.query.graphql'
+import graphqlQuery from './services.query.graphql'
 
 // Lib
 import fetchContent from '../lib/fetch-content'
@@ -20,25 +20,25 @@ import QuoteBlock from '../components/quote-block/quote-block'
 import ServicesList from '../components/services-list/services-list'
 import TextBlock from '../components/text-block/text-block'
 import TitleListBlock from '../components/title-list-block/title-list-block'
-import query from './practice/[slug].query'
+import query from './service/[slug].query'
 
-const Page = ({ practiceOverview, meta }) => (
+const Page = ({ servicesOverview, meta }) => (
 	<React.Fragment>
-		<AppHead meta={meta} seo={practiceOverview.seo} />
+		<AppHead meta={meta} seo={servicesOverview.seo} />
 		<AppHeader />
 		<main className="page">
 			<PageHeader
-				image={practiceOverview.header.responsiveImage}
-				subtitle={practiceOverview.subtitle}
-				title={practiceOverview.title}
+				image={servicesOverview.header.responsiveImage}
+				subtitle={servicesOverview.subtitle}
+				title={servicesOverview.title}
 			/>
-			<ServicesList services={practiceOverview.services.slice(0, 3)} />
+			<ServicesList services={servicesOverview.services.slice(0, 3)} />
 			<div className="container">
 				<h4 className="services__title h3">En zelfs ook</h4>
 			</div>
-			<ServicesList services={practiceOverview.services.slice(3, 5)} small />
+			<ServicesList services={servicesOverview.services.slice(3, 5)} small />
 			<section className="page__content">
-				{practiceOverview.content.map((block, index) => {
+				{servicesOverview.content.map((block, index) => {
 					switch (block.recordType) {
 						case 'image':
 							return <ImageBlock key={index} image={block.image.responsiveImage} title={block.title} />
@@ -68,10 +68,10 @@ const Page = ({ practiceOverview, meta }) => (
 				})}
 			</section>
 			<CallToAction
-				buttonLabel={practiceOverview.callToAction.label}
-				link={practiceOverview.callToAction.link}
-				title={practiceOverview.callToAction.title}
-				text={practiceOverview.callToAction.text}
+				buttonLabel={servicesOverview.callToAction.label}
+				link={servicesOverview.callToAction.link}
+				title={servicesOverview.callToAction.title}
+				text={servicesOverview.callToAction.text}
 			/>
 		</main>
 		<AppFooter />
@@ -82,10 +82,10 @@ Page.getInitialProps = async () => {
 	return await fetchContent({ query: graphqlQuery }).then(data => ({
 		meta: {
 			...data._site.globalSeo,
-			...data.practiceOverview.seo,
-			keywords: data.practiceOverview.keywords,
+			...data.servicesOverview.seo,
+			keywords: data.servicesOverview.keywords,
 		},
-		practiceOverview: data.practiceOverview,
+		servicesOverview: data.servicesOverview,
 	}))
 }
 
