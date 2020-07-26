@@ -105,7 +105,7 @@ const AppFooter = () => (
 							<a
 								className="body-detail"
 								href="https://www.datocms-assets.com/24034/1595787652-privacyverklaring.pdf"
-								aria-title="PDF bestand van Brigitta van Dijck privacy statement"
+								aria-label="PDF bestand van Brigitta van Dijck privacy statement"
 								target="_blank"
 								rel="noopener noreferrer"
 							>
