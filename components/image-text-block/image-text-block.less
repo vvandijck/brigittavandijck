@@ -13,18 +13,18 @@
 	@media (min-width: @layout-medium) {
 		background-image: linear-gradient(-90deg, transparent, transparent 30%, @color-cyan 0, @color-cyan);
 	}
-}
 
-.image-text-block--inverted .container {
-	flex-direction: column-reverse;
+	.image-text-block--inverted & {
+		flex-direction: column-reverse;
 
-	@media (min-width: @layout-small) {
-		flex-direction: row-reverse;
-		background-image: linear-gradient(90deg, transparent, transparent 25%, @color-cyan 0, @color-cyan);
-	}
+		@media (min-width: @layout-small) {
+			flex-direction: row-reverse;
+			background-image: linear-gradient(90deg, transparent, transparent 25%, @color-cyan 0, @color-cyan);
+		}
 
-	@media (min-width: @layout-medium) {
-		background-image: linear-gradient(90deg, transparent, transparent 30%, @color-cyan 0, @color-cyan);
+		@media (min-width: @layout-medium) {
+			background-image: linear-gradient(90deg, transparent, transparent 30%, @color-cyan 0, @color-cyan);
+		}
 	}
 }
 
@@ -45,19 +45,19 @@
 		margin: 0 @spacing-bigger 0 0;
 		padding: @spacing-bigger 0 @spacing-bigger @spacing-bigger;
 	}
-}
 
-.image-text-block--inverted .image-text-block__content {
-	margin: -@spacing-huge @spacing-big 0 0;
+	.image-text-block--inverted & {
+		margin: -@spacing-huge @spacing-big 0 0;
 
-	@media (min-width: @layout-small) {
-		margin: 0 0 0 @spacing-big;
-		padding: @spacing-big @spacing-big @spacing-big 0;
-	}
+		@media (min-width: @layout-small) {
+			margin: 0 0 0 @spacing-big;
+			padding: @spacing-big @spacing-big @spacing-big 0;
+		}
 
-	@media (min-width: @layout-medium) {
-		margin: 0 0 0 @spacing-bigger;
-		padding: @spacing-bigger @spacing-bigger @spacing-bigger 0;
+		@media (min-width: @layout-medium) {
+			margin: 0 0 0 @spacing-bigger;
+			padding: @spacing-bigger @spacing-bigger @spacing-bigger 0;
+		}
 	}
 }
 
@@ -71,18 +71,18 @@
 		flex: 1 1 50%;
 		margin: 0 @spacing-bigger 0 0;
 	}
-}
 
-.image-text-block--inverted .image-text-block__media {
-	@media (min-width: @layout-small) {
-		margin: 0 0 0 @spacing-big;
+	.image-text-block--inverted & {
+		@media (min-width: @layout-small) {
+			margin: 0 0 0 @spacing-big;
+		}
+
+		@media (min-width: @layout-medium) {
+			margin: 0 0 0 @spacing-bigger;
+		}
 	}
 
-	@media (min-width: @layout-medium) {
-		margin: 0 0 0 @spacing-bigger;
+	.responsive-image {
+		display: block;
 	}
-}
-
-.image-text-block__media .responsive-image {
-	display: block;
 }

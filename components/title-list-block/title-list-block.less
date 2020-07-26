@@ -50,14 +50,14 @@
 		flex: 1 0 550px;
 		padding: @spacing-bigger;
 	}
-}
 
-.title-list-block--inverted .title-list-block__content {
-	align-self: flex-start;
-	margin: 0 @spacing-big 0 0;
+	.title-list-block--inverted & {
+		align-self: flex-start;
+		margin: 0 @spacing-big 0 0;
 
-	@media (min-width: @layout-small) {
-		margin: 0;
+		@media (min-width: @layout-small) {
+			margin: 0;
+		}
 	}
 }
 
