@@ -9,21 +9,21 @@ const AppFooter = () => (
 					<h3 className="app-footer__column-title h3">Ontdek</h3>
 					<ul className="app-footer__list unordered-list body">
 						<li>
-							<Link href="/services">
+							<Link href="/services" prefetch={false}>
 								<a className="body" title="Werkwijze">
 									Services
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href="/about">
+							<Link href="/about" prefetch={false}>
 								<a className="body" title="Over">
 									Over
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href="/contact">
+							<Link href="/contact" prefetch={false}>
 								<a className="body" title="Contact">
 									Contact
 								</a>
