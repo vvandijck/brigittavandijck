@@ -1,16 +1,23 @@
 @import (reference) './variables';
 
 .list,
-ul {
+.numbered-list,
+.unordered-list {
 	margin-bottom: @spacing-small;
 	margin-left: @spacing-large;
+
+	li {
+		margin: @spacing-tiny 0;
+	}
+}
+
+.list,
+ul {
 	list-style: disc;
 }
 
 .numbered-list,
 ol {
-	margin-bottom: @spacing-small;
-	margin-left: @spacing-large;
 	list-style: decimal;
 }
 
