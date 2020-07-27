@@ -2,16 +2,29 @@
 
 .call-to-action {
 	display: inline-block;
-	background-color: @color-powder;
 	width: 100%;
-	padding: @spacing-big 0;
+	padding: @spacing-big @spacing-small;
+	background-color: @color-powder;
 
 	@media (min-width: @layout-small) {
-		padding: @spacing-bigger 0;
+		padding: @spacing-bigger @spacing-small;
 	}
 
 	.container {
+		max-width: 650px;
 		text-align: center;
+	}
+
+	.h3 {
+		margin-bottom: @spacing-small;
+
+		@media (min-width: @layout-small) {
+			margin-bottom: @spacing-medium;
+		}
+
+		@media (min-width: @layout-medium) {
+			margin-bottom: @spacing-large;
+		}
 	}
 }
 

@@ -20,7 +20,7 @@ import QuoteBlock from '../../components/quote-block/quote-block'
 import TextBlock from '../../components/text-block/text-block'
 import TitleListBlock from '../../components/title-list-block/title-list-block'
 
-const Page = ({ service, meta }) => (
+const Page = ({ service, servicesOverview, meta }) => (
 	<React.Fragment>
 		<AppHead meta={meta} seo={service.seo} />
 		<AppHeader />
@@ -79,6 +79,7 @@ Page.getInitialProps = async ({ query }) => {
 			keywords: data.service.keywords,
 		},
 		service: data.service,
+		servicesOverview: data.servicesOverview,
 	}))
 }
 
