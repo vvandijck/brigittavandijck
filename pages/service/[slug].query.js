@@ -9,6 +9,23 @@ const query = slug => `
 				}
 			}
 		}
+		servicesOverview {
+			header {
+				responsiveImage(imgixParams: {fit: crop, w: 1440, h: 500, auto: format}) {
+					alt
+					aspectRatio
+					base64
+					bgColor
+					height
+					sizes
+					src
+					srcSet
+					title
+					webpSrcSet
+					width
+				}
+			}
+		}
 		service(filter: {slug: {eq: "${slug}"}}) {
 			title
 			subtitle

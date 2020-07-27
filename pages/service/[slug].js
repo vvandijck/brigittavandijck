@@ -25,7 +25,11 @@ const Page = ({ service, meta }) => (
 		<AppHead meta={meta} seo={service.seo} />
 		<AppHeader />
 		<main className="page">
-			<PageHeader subtitle={service.subtitle} title={service.title} />
+			<PageHeader
+				image={servicesOverview.header.responsiveImage}
+				subtitle={service.subtitle}
+				title={service.title}
+			/>
 			<section className="page__content">
 				{service.content.map((block, index) => {
 					switch (block.recordType) {
