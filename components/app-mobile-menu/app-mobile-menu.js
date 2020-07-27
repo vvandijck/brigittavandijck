@@ -27,8 +27,7 @@ class AppMobileHeader extends Component {
 						className="app-mobile-menu__button app-mobile-menu__button--open app-button app-button--primary"
 						aria-label="Open menu"
 						onClick={this.toggleMenu}
-					>
-					</button>
+					></button>
 				)}
 				{showMenu && (
 					<div className="app-mobile-menu__content">
@@ -73,8 +72,7 @@ class AppMobileHeader extends Component {
 						className="app-mobile-menu__button app-mobile-menu__button--close app-button app-button--primary"
 						aria-label="Sluit menu"
 						onClick={this.toggleMenu}
-					>
-					</button>
+					></button>
 				)}
 			</nav>
 		)

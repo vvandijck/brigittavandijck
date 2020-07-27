@@ -5,7 +5,7 @@ class CustomDocument extends Document {
 		return (
 			<Html lang="nl">
 				<Head>
-					<meta name="application-name" content="Brigitta van Dijck" />
+					<meta name="application-name" content="Brigitta van Dijck - Office management" />
 					<meta name="theme-color" content="#FBE8A6" />
 
 					<meta name="msapplication-config" content="browserconfig.xml" />
@@ -19,7 +19,7 @@ class CustomDocument extends Document {
 
 					<meta name="mobile-web-app-capable" content="no" />
 					<meta name="apple-mobile-web-app-capable" content="no" />
-					<meta name="apple-mobile-web-app-title" content="Brigitta van Dijck" />
+					<meta name="apple-mobile-web-app-title" content="Brigitta van Dijck - Office management" />
 					<meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
 					<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
