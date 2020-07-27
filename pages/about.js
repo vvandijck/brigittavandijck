@@ -11,6 +11,7 @@ import fetchContent from '../lib/fetch-content'
 import AppFooter from '../components/app-footer/app-footer'
 import AppHead from '../components/app-head/app-head'
 import AppHeader from '../components/app-header/app-header'
+import AppMobileMenu from '../components/app-mobile-menu/app-mobile-menu'
 import CallToAction from '../components/call-to-action/call-to-action'
 import FullWidthImage from '../components/full-width-image/full-width-image'
 import ImageBlock from '../components/image-block/image-block'
@@ -24,6 +25,7 @@ const Page = ({ about, meta }) => (
 	<React.Fragment>
 		<AppHead meta={meta} seo={about.seo} />
 		<AppHeader />
+		<AppMobileMenu />
 		<main className="page">
 			<PageHeader image={about.header.responsiveImage} subtitle={about.subtitle} title={about.title} />
 			<section className="page__content">

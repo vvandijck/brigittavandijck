@@ -1,7 +1,7 @@
 @import (reference) '../../styles/variables';
 
 .app-footer {
-	padding: @spacing-big 0;
+	padding: @spacing-big 0 @spacing-huge;
 	background-color: @color-tangerine;
 
 	@media (min-width: @layout-small) {
@@ -94,11 +94,7 @@
 
 .app-footer__social-icon {
 	display: block;
-	width: 32px;
-
-	@media (min-width: @layout-small) {
-		width: 35px;
-	}
+	width: 35px;
 
 	@media (min-width: @layout-medium) {
 		width: 45px;

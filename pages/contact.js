@@ -11,6 +11,7 @@ import fetchContent from '../lib/fetch-content'
 import AppFooter from '../components/app-footer/app-footer'
 import AppHead from '../components/app-head/app-head'
 import AppHeader from '../components/app-header/app-header'
+import AppMobileMenu from '../components/app-mobile-menu/app-mobile-menu'
 import CallToAction from '../components/call-to-action/call-to-action'
 import PageHeader from '../components/page-header/page-header'
 
@@ -18,6 +19,7 @@ const Page = ({ contact, meta }) => (
 	<React.Fragment>
 		<AppHead meta={meta} seo={contact.seo} />
 		<AppHeader />
+		<AppMobileMenu />
 		<main className="page">
 			<PageHeader image={contact.header.responsiveImage} subtitle={contact.subtitle} title={contact.title} />
 			<section className="page__content"></section>

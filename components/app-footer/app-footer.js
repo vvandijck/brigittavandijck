@@ -17,8 +17,8 @@ const AppFooter = () => (
 						</li>
 						<li>
 							<Link href="/about" prefetch={false}>
-								<a className="body" title="Over">
-									Over
+								<a className="body" title="Over mij">
+									Over mij
 								</a>
 							</Link>
 						</li>

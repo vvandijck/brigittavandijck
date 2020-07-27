@@ -7,7 +7,13 @@ const AppHeader = () => (
 			<div>
 				<Link href="/" prefetch={false}>
 					<a>
-						<img className="app-header__logo" src="https://www.datocms-assets.com/24034/1595598326-logo.svg" width="300" height="40" alt="Logo" />
+						<img
+							className="app-header__logo"
+							src="https://www.datocms-assets.com/24034/1595598326-logo.svg"
+							width="300"
+							height="40"
+							alt="Logo"
+						/>
 					</a>
 				</Link>
 			</div>
@@ -23,7 +29,7 @@ const AppHeader = () => (
 					<li>
 						<Link href="/about" prefetch={false}>
 							<a className="app-button app-button--tertiary" title="Over">
-								Over
+								Over mij
 							</a>
 						</Link>
 					</li>

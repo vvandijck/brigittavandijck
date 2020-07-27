@@ -20,14 +20,14 @@ import QuoteBlock from '../../components/quote-block/quote-block'
 import TextBlock from '../../components/text-block/text-block'
 import TitleListBlock from '../../components/title-list-block/title-list-block'
 
-const Page = ({ practice, meta }) => (
+const Page = ({ service, meta }) => (
 	<React.Fragment>
-		<AppHead meta={meta} seo={practice.seo} />
+		<AppHead meta={meta} seo={service.seo} />
 		<AppHeader />
 		<main className="page">
-			<PageHeader subtitle={practice.subtitle} title={practice.title} />
+			<PageHeader subtitle={service.subtitle} title={service.title} />
 			<section className="page__content">
-				{practice.content.map((block, index) => {
+				{service.content.map((block, index) => {
 					switch (block.recordType) {
 						case 'image':
 							return <ImageBlock key={index} image={block.image.responsiveImage} title={block.title} />
@@ -57,10 +57,10 @@ const Page = ({ practice, meta }) => (
 				})}
 			</section>
 			<CallToAction
-				buttonLabel={practice.callToAction.label}
-				link={practice.callToAction.link}
-				title={practice.callToAction.title}
-				text={practice.callToAction.text}
+				buttonLabel={service.callToAction.label}
+				link={service.callToAction.link}
+				title={service.callToAction.title}
+				text={service.callToAction.text}
 			/>
 		</main>
 		<AppFooter />
@@ -71,10 +71,10 @@ Page.getInitialProps = async ({ query }) => {
 	return await fetchContent({ query: graphqlQuery(query.slug) }).then(data => ({
 		meta: {
 			...data._site.globalSeo,
-			...data.practice.seo,
-			keywords: data.practice.keywords,
+			...data.service.seo,
+			keywords: data.service.keywords,
 		},
-		practice: data.practice,
+		service: data.service,
 	}))
 }
 
