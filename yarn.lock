@@ -6134,10 +6134,10 @@ raw-loader@^4.0.1:
     loader-utils "^2.0.0"
     schema-utils "^2.6.5"
 
-react-datocms@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-1.2.5.tgz#b394f51e157bc92e2df8811500ceafd1267eca6f"
-  integrity sha512-Xs/5VjbUtFT/5PWAgsb0nfnTi/+nD5VJHMr9Jm+0F7jgBLxGaolFM1evZeljyPbInMm5CKgXn1qMdSqsvhGcdA==
+react-datocms@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-1.2.6.tgz#95115d2a4324d0537749f4014357ebbd320bac61"
+  integrity sha512-Ca5amX8yOoiOs2IVHhgnku/UZ1H7sUQJ/ef98wwzv4J6hUNPEbC5k1uy0x12lTiZPHk7TNZL5YOo1L7UmOlKmg==
   dependencies:
     intersection-observer "^0.10.0"
     react-intersection-observer "^8.26.1"
