@@ -10,7 +10,7 @@ const PageHeader = ({ image = {}, subtitle = '', title = '' }) => (
 		)}
 		<div className="page-header__content container">
 			<h1 className="page-header__content-subtitle h3">{title}</h1>
-			<h2 className="page-header__content-title h1">{subtitle}</h2>
+			<h2 className="page-header__content-title h2">{subtitle}</h2>
 		</div>
 	</section>
 )
