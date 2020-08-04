@@ -7,7 +7,7 @@ const TitleListBlock = ({ title = '', text = '', inverted = false }) => (
 			<div className="title-list-block__content">
 				<RichText content={text} />
 			</div>
-			{title && <h3 className="title-list-block__title h2">{title}</h3>}
+			{title && <h3 className="title-list-block__title">{title}</h3>}
 		</div>
 	</section>
 )

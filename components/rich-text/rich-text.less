@@ -134,13 +134,18 @@
 		}
 
 		p {
+			margin: 0 0 @spacing-medium;
 			font-size: 1.375rem;
 			line-height: 1.8181818182;
 		}
 	}
 
 	p + p {
-		margin-top: 1.2rem;
+		margin-top: @spacing-small;
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
 	}
 
 	a {

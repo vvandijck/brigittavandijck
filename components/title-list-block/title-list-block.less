@@ -3,12 +3,12 @@
 .title-list-block .container {
 	display: flex;
 	flex-direction: column-reverse;
-	max-width: 650px;
+	max-width: 700px;
 
 	@media (min-width: @layout-small) {
 		flex-direction: row;
 		align-items: center;
-		max-width: @layout-large;
+		max-width: @layout-width;
 		background-image: linear-gradient(-90deg, transparent, transparent 50%, @color-cyan 0, @color-cyan);
 	}
 
@@ -34,8 +34,6 @@
 	z-index: 1;
 	align-self: flex-end;
 	width: 100%;
-	max-width: 500px;
-	margin: 0 0 0 @spacing-big;
 	padding: @spacing-medium;
 	background-color: @color-cyan;
 
@@ -53,7 +51,6 @@
 
 	.title-list-block--inverted & {
 		align-self: flex-start;
-		margin: 0 @spacing-big 0 0;
 
 		@media (min-width: @layout-small) {
 			margin: 0;

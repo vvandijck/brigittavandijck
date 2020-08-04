@@ -26,7 +26,7 @@ const Page = ({ about, meta }) => (
 		<AppHead meta={meta} seo={about.seo} />
 		<AppHeader />
 		<AppMobileMenu />
-		<main className="page">
+		<main className="page page--about">
 			<PageHeader image={about.header.responsiveImage} subtitle={about.subtitle} title={about.title} />
 			<section className="page__content">
 				{about.content.map((block, index) => {

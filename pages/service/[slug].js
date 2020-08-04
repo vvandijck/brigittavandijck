@@ -24,7 +24,7 @@ const Page = ({ service, servicesOverview, meta }) => (
 	<React.Fragment>
 		<AppHead meta={meta} seo={service.seo} />
 		<AppHeader />
-		<main className="page">
+		<main className="page page--service">
 			<PageHeader image={servicesOverview.header.responsiveImage} subtitle={service.subtitle} title={service.title} />
 			<section className="page__content">
 				{service.content.map((block, index) => {

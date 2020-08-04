@@ -28,7 +28,7 @@ const Page = ({ servicesOverview, meta }) => (
 		<AppHead meta={meta} seo={servicesOverview.seo} />
 		<AppHeader />
 		<AppMobileMenu />
-		<main className="page">
+		<main className="page page--services">
 			<PageHeader
 				image={servicesOverview.header.responsiveImage}
 				subtitle={servicesOverview.subtitle}

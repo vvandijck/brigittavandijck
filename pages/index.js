@@ -27,7 +27,7 @@ const Page = ({ home, meta }) => (
 		<AppHead meta={meta} />
 		<AppHeader />
 		<AppMobileMenu />
-		<main className="page">
+		<main className="page page--home">
 			<PageHeader image={home.header.responsiveImage} subtitle={home.subtitle} title={home.title} />
 			<div className="container">
 				<h3 className="services__title h2">Wat ik voor je kan doen</h3>
