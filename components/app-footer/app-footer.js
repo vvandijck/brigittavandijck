@@ -90,14 +90,9 @@ const AppFooter = () => (
 			</div>
 			<div className="app-footer__legal">
 				<div className="app-footer__legal--column">
-					<ul className="list-inline">
-						<li>
-							<span className="body-detail">KvK: 77533151</span>
-						</li>
-						<li>
-							<span className="body-detail">&copy; 2020 - Brigitta van Dijck</span>
-						</li>
-					</ul>
+					<dl className="body-detail"><dt>KvK: </dt><dd>77533151</dd></dl>
+					<dl className="body-detail"><dt>BTW: </dt><dd>NL003205865B35</dd></dl>
+					<dl className="body-detail"><dt>IBAN: </dt><dd>NL52INGB0009593645</dd></dl>
 				</div>
 				<div className="app-footer__legal--column">
 					<ul className="list-inline">

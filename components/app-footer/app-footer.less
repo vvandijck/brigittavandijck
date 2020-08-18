@@ -112,8 +112,31 @@
 	}
 }
 
-.app-footer__legal--column:first-child {
+.app-footer__legal--column {
 	margin-bottom: @spacing-smaller;
+
+	dl {
+		margin-bottom: @spacing-small;
+
+		@media (min-width: @layout-small) {
+			display: inline;
+			margin: 0 8px;
+		}
+	}
+
+	dt, dd {
+		@media (min-width: @layout-small) {
+			display: inline;
+		}
+	}
+
+	&:first-child {
+		text-align: center;
+
+		@media (min-width: @layout-small) {
+			margin-right: @spacing-large;
+		}
+	}
 
 	@media (min-width: @layout-small) {
 		margin-bottom: 0;
