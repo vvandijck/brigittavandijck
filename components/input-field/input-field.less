@@ -1,0 +1,49 @@
+@import (reference) '../../styles/variables.less';
+
+.input-field {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: @spacing-smaller;
+
+	@media (min-width: @layout-small) {
+		flex-direction: row;
+		margin-bottom: @spacing-small;
+	}
+
+	&.input-field--hidden {
+		display: none;
+	}
+}
+
+.input-field__label {
+	display: block;
+	min-width: 200px;
+	margin: 0 0 @spacing-tiny;
+	padding-right: @spacing-small;
+
+	@media (min-width: @layout-small) {
+		margin: @spacing-tiny 0;
+	}
+
+	.input-field--required &::after {
+		content: ' *';
+		font-weight: 700;
+	}
+}
+
+.input-field__input {
+	width: 100%;
+	padding: @spacing-tiny @spacing-smaller;
+	border: none;
+	border-radius: 0;
+
+	&.textarea {
+		min-height: 150px;
+		resize: vertical;
+	}
+
+	.input-field--validate &:invalid {
+		box-shadow: inset 0px 0 0 2px red;
+	}
+}

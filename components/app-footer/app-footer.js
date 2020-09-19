@@ -88,39 +88,6 @@ const AppFooter = () => (
 					</ul>
 				</div>
 			</div>
-			<div className="app-footer__legal">
-				<div className="app-footer__legal--column">
-					<dl className="body-detail"><dt>KvK: </dt><dd>77533151</dd></dl>
-					<dl className="body-detail"><dt>BTW: </dt><dd>NL003205865B35</dd></dl>
-					<dl className="body-detail"><dt>IBAN: </dt><dd>NL52INGB0009593645</dd></dl>
-				</div>
-				<div className="app-footer__legal--column">
-					<ul className="list-inline">
-						<li>
-							<a
-								className="body-detail"
-								href="https://www.datocms-assets.com/24034/1595787652-privacyverklaring.pdf"
-								aria-label="PDF bestand van Brigitta van Dijck privacy statement"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Privacy statement
-							</a>
-						</li>
-						<li>
-							<a
-								className="body-detail"
-								href="https://www.datocms-assets.com/24034/1595787650-avht-def-brigitta-van-dijck-versie-10032020.pdf"
-								aria-label="PDF bestand van Brigitta van Dijck algemene voorwaarden"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								Algemene voorwaarden
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
 		</div>
 	</footer>
 )
