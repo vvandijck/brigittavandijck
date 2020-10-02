@@ -25,7 +25,7 @@
 		"graphql-request": "^2.0.0",
 		"less": "^3.12.2",
 		"next": "^9.5.3",
-		"next-pwa": "^3.1.4",
+		"next-pwa": "^3.1.5",
 		"preact": "^10.4.8",
 		"preact-render-to-string": "^5.1.10",
 		"react": "github:preact-compat/react#1.0.0",
