@@ -35,7 +35,7 @@
 	},
 	"devDependencies": {
 		"prettier": "^2.1.2",
-		"raw-loader": "^4.0.1",
+		"raw-loader": "^4.0.2",
 		"stylelint": "^13.7.1",
 		"stylelint-config-standard": "^20.0.0"
 	},
