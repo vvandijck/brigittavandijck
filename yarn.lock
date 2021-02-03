@@ -5456,10 +5456,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-datocms@^1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-1.4.5.tgz#738a842c1dad9de7dc06b837deb8987dd2eddbbd"
-  integrity sha512-Q5tIhDzLyOdXlDBdYB5E3BOLttr3gkIsMhKC0Z7gFofzF5EON9w96ZyvH7v3ogTt/Oj0mK+4lfPOL8FaBj5s0Q==
+react-datocms@^1.4.7:
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/react-datocms/-/react-datocms-1.4.7.tgz#c5d481fee58f1920b259bf7c1c7b9a9c1c2814a1"
+  integrity sha512-r8NC2jnIvp5K38VJiMle6mlKksn6r0F5VyQPOenE2KMqTv0O2iqDw6t8mDOBv5ttxIgCAihi1ydyK9tlt5P4kg==
   dependencies:
     datocms-listen "^0.1.1"
     intersection-observer "^0.10.0"
