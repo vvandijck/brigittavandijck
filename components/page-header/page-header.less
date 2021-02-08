@@ -1,25 +1,5 @@
 @import (reference) '../../styles/variables.less';
 
-@gradient: linear-gradient(
-	to bottom,
-	hsla(47, 27%, 55%, 0) 0%,
-	hsla(47, 27%, 55%, 0.003) 14.2%,
-	hsla(47, 27%, 55%, 0.014) 27.1%,
-	hsla(47, 27%, 55%, 0.032) 38.8%,
-	hsla(47, 27%, 55%, 0.058) 49.4%,
-	hsla(47, 27%, 55%, 0.093) 58.8%,
-	hsla(47, 27%, 55%, 0.136) 67.2%,
-	hsla(47, 27%, 55%, 0.189) 74.5%,
-	hsla(47, 27%, 55%, 0.251) 80.8%,
-	hsla(47, 27%, 55%, 0.324) 86.1%,
-	hsla(47, 27%, 55%, 0.407) 90.5%,
-	hsla(47, 27%, 55%, 0.502) 94%,
-	hsla(47, 27%, 55%, 0.608) 96.7%,
-	hsla(47, 27%, 55%, 0.726) 98.6%,
-	hsla(47, 27%, 55%, 0.857) 99.6%,
-	hsl(47, 27%, 55%) 100%
-);
-
 .page-header {
 	position: relative;
 	height: 40vh;
@@ -70,16 +50,6 @@
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1;
-}
-
-.page-header::after {
-	content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-	background-image: @gradient;
 }
 
 .page-header__content-subtitle {
