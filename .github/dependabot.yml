@@ -1,0 +1,20 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: monthly
+    time: "07:00"
+  open-pull-requests-limit: 99
+  ignore:
+  - dependency-name: next
+    versions:
+    - 10.0.4
+    - 10.0.6
+  - dependency-name: next-pwa
+    versions:
+    - 5.0.2
+    - 5.0.4
+  - dependency-name: preact
+    versions:
+    - 10.5.8
