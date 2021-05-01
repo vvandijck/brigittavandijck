@@ -30,7 +30,7 @@
 		"preact": "^10.5.12",
 		"preact-render-to-string": "^5.1.12",
 		"react": "github:preact-compat/react#1.0.0",
-		"react-datocms": "^1.5.5",
+		"react-datocms": "^1.6.3",
 		"react-dom": "github:preact-compat/react-dom#1.0.0",
 		"react-ssr-prepass": "npm:preact-ssr-prepass@^1.0.1"
 	},
