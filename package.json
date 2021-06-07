@@ -21,24 +21,24 @@
 	},
 	"dependencies": {
 		"@zeit/next-less": "^1.0.1",
-		"dotenv": "^10.0.0",
+		"dotenv": "^8.2.0",
 		"graphql": "^15.5.0",
 		"graphql-request": "^3.4.0",
 		"less": "^4.1.1",
-		"next": "^10.0.6",
+		"next": "^10.0.7",
 		"next-pwa": "^5.0.5",
-		"preact": "^10.5.13",
-		"preact-render-to-string": "^5.1.19",
+		"preact": "^10.5.12",
+		"preact-render-to-string": "^5.1.12",
 		"react": "github:preact-compat/react#1.0.0",
-		"react-datocms": "^1.6.3",
+		"react-datocms": "^1.5.5",
 		"react-dom": "github:preact-compat/react-dom#1.0.0",
 		"react-ssr-prepass": "npm:preact-ssr-prepass@^1.0.1"
 	},
 	"devDependencies": {
-		"prettier": "^2.3.1",
+		"prettier": "^2.2.1",
 		"raw-loader": "^4.0.2",
-		"stylelint": "^13.13.1",
-		"stylelint-config-standard": "^22.0.0",
+		"stylelint": "^13.11.0",
+		"stylelint-config-standard": "^20.0.0",
 		"webpack": "^4.46.0"
 	},
 	"engines": {
