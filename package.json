@@ -35,7 +35,7 @@
 		"react-ssr-prepass": "npm:preact-ssr-prepass@^1.0.1"
 	},
 	"devDependencies": {
-		"prettier": "^2.3.1",
+		"prettier": "^2.3.2",
 		"raw-loader": "^4.0.2",
 		"stylelint": "^13.13.1",
 		"stylelint-config-standard": "^22.0.0",
